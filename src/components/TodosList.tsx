@@ -1,18 +1,16 @@
 import TodoItem from "./TodoItem";
-import { useLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 
-type Todos = {
+export type Todos = {
         id: string;
         title: string;
         description: string;
-        completed: boolean,
-        dueDate: string;
     }
 
 
 
 const TodosList = () => {
-    const data = useLoaderData() as Todos[]
+    const data = useRouteLoaderData('todo') as Todos[]
 
 
 

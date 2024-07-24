@@ -1,5 +1,7 @@
+import EditForm from "../components/ui/EditForm";
+
 const EditTodoPage = () => {
-    return <p>Edit Todo Page </p>
+    return <EditForm />
 }
 
 export default EditTodoPage;

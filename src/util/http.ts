@@ -18,8 +18,6 @@ export const createTodoAction: ActionFunction =  async ({ request }) => {
         id: uuidv4(),
         title: formData.get('title'),
         description: formData.get('description'),
-        status: formData.get('status'),
-        dueDate: formData.get('dueDate'),
     }
 
     const response = await fetch('http://localhost:3000/todos', {
@@ -34,5 +32,25 @@ export const createTodoAction: ActionFunction =  async ({ request }) => {
         throw json({message: 'Could not fetch data'}, {status: 500});
     }
 
+    return redirect('/todos')
+}
+
+export const updateTodo: ActionFunction = async ({params, request}) => {
+    const formData = await request.formData();
+    const todo = Object.entries(formData.entries())
+    const id = params.id
+
+    const response = await fetch(`http://localhost:3000/todos/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(todo)
+    })
+
+    if (!response.ok) {
+       throw json({message: 'Could not fetch data'}, {status: 500})
+    }
+    
     return redirect('/todos')
 }

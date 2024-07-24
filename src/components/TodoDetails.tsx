@@ -1,13 +1,10 @@
 const TodoDetails = ({
     title,
     description,
-    status,
-    dueDate,
   }: {
     title: string;
     description: string;
-    status: string;
-    dueDate: string;
+    
   }) => {
     return (
       <section>
@@ -17,8 +14,6 @@ const TodoDetails = ({
               <h3>Description</h3>
               <p>{description}</p>
           </div>
-          <p>Status: {status}</p>
-          <p>Due date: {dueDate}</p>
         </div>
       </section>
     );

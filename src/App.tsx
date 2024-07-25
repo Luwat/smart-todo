@@ -6,20 +6,20 @@ import TodosPage from "./pages/Todos.tsx";
 import EditTodoPage from "./pages/Edit.tsx";
 import TodoDetailsPage from "./pages/Details.tsx";
 import CreateTodoPage from "./pages/Create.tsx";
-import { createTodoAction, todoLoader, updateTodo } from "./util/http.ts";
+import { createTodoAction, deleteTodo, todoLoader, updateTodo } from "./util/http.ts";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
-      { path: "/", element: <HomePage /> },
+      { index: true, element: <HomePage /> },
       {
         path: "/todos",
         element: <TodoLayout />,
         id: "todo",
         children: [
-          { path: "/todos", element: <TodosPage /> },
+          { path: '/todos', element: <TodosPage />, action: deleteTodo},
           {
             path: "/todos/create",
             element: <CreateTodoPage />,
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
           { path: "/todos/:id", element: <TodoDetailsPage /> },
           { path: "/todos/:id/edit", element: <EditTodoPage />, action: updateTodo },
         ],
-        loader: todoLoader,
+        loader: todoLoader
       },
     ],
   },

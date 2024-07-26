@@ -1,13 +1,17 @@
 # Smart-Todo App
 
-This app is built with the React.js using Vite build. 
+This [Smart-Todo](https://github.com/Luwat/smart-todo) app is built with the [React.js](https://react.dev/) using [Vite](https://vitejs.dev/). 
 
-The following 3rd party packages were included for seemless local running of the application.
+The following 3rd party packages and resources were used for seemless local running of the application.
 
-- React-Router
-- UUID
-- JSON Server
--Tailwind CSS
+- [React-Router](https://reactrouter.com/en/main) for routing, managing route states `(loaders, actions, navigations etc)` and data.
+- [UUID](https://www.npmjs.com/package/uuid) for generating unique ids
+- [JSON-Server](https://www.npmjs.com/package/json-server) for running a local server and managing json data.
+- [TailwindCSS](https://tailwindcss.com/) for styling
+- [WebAIM](https://webaim.org/resources/contrastchecker/) to assertain the color contrast for accessibility purpose
+
+
+Got background image from [Kari Shea](https://unsplash.com/@karishea?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/silver-iphone-5s-near-field-notes-book-Dn-BqRT9RBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
 # React + TypeScript + Vite
 

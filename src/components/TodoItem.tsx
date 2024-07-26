@@ -1,15 +1,8 @@
-import { Link, useSubmit } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
+
 
 const TodoItem = ({ id, title }: { id?: string; title?: string }) => {
-  const submit = useSubmit()
 
-  const handleTodoDelete = () => {
-    const proceed = confirm('Are you you want to delete todo')
-
-    if (proceed) {
-      submit(null, {method: 'DELETE'})
-    }
-  }
   return (
     <section style={{ display: "flex", alignItems: "center", gap: "10px" }}>
       <p>
@@ -24,7 +17,17 @@ const TodoItem = ({ id, title }: { id?: string; title?: string }) => {
         <Link to={`/todos/${id}/edit`}>
           <button>Edit</button>
         </Link>
-        <button onClick={handleTodoDelete}>Delete</button>
+        <Form
+          method="post"
+          action={`${id}/destroy`}
+          onSubmit={(event) => {
+            if (!confirm("Are you you want to delete todo")) {
+              event.preventDefault();
+            }
+          }}
+        >
+          <button type="submit">Delete</button>
+        </Form>
       </div>
     </section>
   );

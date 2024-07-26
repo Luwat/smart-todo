@@ -54,17 +54,3 @@ export const updateTodo: ActionFunction = async ({ params, request }) => {
 
   return redirect("/todos");
 };
-
-export const deleteTodo: ActionFunction = async ({ params }) => {
-  const id = params.id;
-
-  const response = await fetch(`http://localhost:3000/todos/${id}`, {
-    method: "DELETE",
-  });
-
-  if (!response.ok) {
-    throw json({ message: "Could not fetch data" }, { status: 500 });
-  }
-
-  return redirect("/todos");
-};

@@ -1,21 +1,21 @@
 import { Form, Link } from "react-router-dom";
 
-
 const TodoItem = ({ id, title }: { id?: string; title?: string }) => {
-
   return (
-    <section style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-      <p>
-        <input type="checkbox" />
-      </p>
-      <Link to={`/todos/${id}`}>
-        <div>
+    <section className="flex gap-10 px-4 md:px-8 m-4 text-lg rounded-lg justify-center items-center h-28 bg-neutral-50 shadow-lg">
+      <div className="w-8/12 my-4 flex gap-4 justify-center items-center">
+        <p>
+          <input type="checkbox" className="rounded-full" />
+        </p>
+        <Link to={`/todos/${id}`} className="">
           <h1>{title}</h1>
-        </div>
-      </Link>
-      <div>
+        </Link>
+      </div>
+      <div className="flex gap-3 justify-center items-center">
         <Link to={`/todos/${id}/edit`}>
-          <button>Edit</button>
+          <button className="py-2 px-4 rounded-md bg-neutral-700 hover:bg-neutral-100 text-neutral-100 hover:text-neutral-700">
+            Edit
+          </button>
         </Link>
         <Form
           method="post"
@@ -26,7 +26,12 @@ const TodoItem = ({ id, title }: { id?: string; title?: string }) => {
             }
           }}
         >
-          <button type="submit">Delete</button>
+          <button
+            type="submit"
+            className="py-2 px-4 rounded-md bg-red-700 hover:bg-red-100 text-red-100 hover:text-red-700"
+          >
+            Delete
+          </button>
         </Form>
       </div>
     </section>

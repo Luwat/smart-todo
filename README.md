@@ -1,3 +1,14 @@
+# Smart-Todo App
+
+This app is built with the React.js using Vite build. 
+
+The following 3rd party packages were included for seemless local running of the application.
+
+- React-Router
+- UUID
+- JSON Server
+-Tailwind CSS
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

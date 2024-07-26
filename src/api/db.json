@@ -1,3 +1,19 @@
 {
-  "todos": []
+  "todos": [
+    {
+      "id": "82ab151c-d131-495a-8036-8622c7bc6094",
+      "title": "Workout",
+      "description": "Wake up early and go to the gym"
+    },
+    {
+      "id": "af097b9a-6508-40aa-b259-c9c83b4c90c0",
+      "title": "Go to the market",
+      "description": "Buy some groceries"
+    },
+    {
+      "id": "5115033b-fc1a-4ea3-8dea-fc047829edc9",
+      "title": "Call Dad before noon",
+      "description": "Discuss important topics for next weeks meeting"
+    }
+  ]
 }

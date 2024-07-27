@@ -16,7 +16,7 @@ export default function HomePage() {
             to={"/todos"}
             className="w-52 h-48"
           >
-            <li className="border-2 px-4 py-2 sm:px-8 sm:py-4 sm:text-2xl hover:text-neutral-700 hover:bg-neutral-100 border-neutral-100 hover:border-neutral-700 rounded-md list-none opacity-100">
+            <li className="border-2 px-4 py-2 sm:px-8 sm:py-4 sm:text-2xl hover:text-neutral-700 hover:bg-neutral-100 border-neutral-100 rounded-md list-none opacity-100">
               View all Todos
             </li>
           </Link>

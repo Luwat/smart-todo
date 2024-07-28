@@ -10,6 +10,20 @@ The following 3rd party packages and resources were used for seemless local runn
 - [TailwindCSS](https://tailwindcss.com/) for styling
 - [WebAIM](https://webaim.org/resources/contrastchecker/) to assertain the color contrast for accessibility purpose
 
+# How to run this app
+
+```Open your terminal and run the following commands:
+//To install dependencies
+npm install
+
+//To run the client-side server
+npm run dev
+
+//To run the json-server to access your api data
+npx json-server ./src/api/db.json
+```
+
+Now you can use the app, you can create, read, update and delete your todos
 
 Got background image from [Kari Shea](https://unsplash.com/@karishea?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/silver-iphone-5s-near-field-notes-book-Dn-BqRT9RBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 

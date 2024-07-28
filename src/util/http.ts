@@ -11,13 +11,34 @@ export async function todoLoader() {
   return response;
 }
 
+export type Error = {
+  title: string;
+  description: string;
+}
+
 export const createTodoAction: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
+  
+  const title = formData.get("title") as string
+  const description = formData.get("description") as string;
+  const errors = {} as Error
+
+  if (title.length < 5) {
+    errors.title = "Cannot be less than 5 characters"
+  }
+
+  if (description.length < 150) {
+    errors.description = "Cannot be less than 150 characters"
+  }
+
+  if (Object.keys(errors).length) {
+    return errors;
+  }
 
   const todos = {
     id: uuidv4(),
-    title: formData.get("title"),
-    description: formData.get("description"),
+    title,
+    description,
   };
 
   const response = await fetch("http://localhost:3000/todos", {
@@ -27,6 +48,8 @@ export const createTodoAction: ActionFunction = async ({ request }) => {
     },
     body: JSON.stringify(todos),
   });
+
+
 
   if (!response.ok) {
     throw json({ message: "Could not fetch data" }, { status: 500 });

@@ -22,7 +22,6 @@ const AddForm: FC = () => {
           className="rounded-md w-full"
           required
           placeholder="not less than 5 characters"
-          minLength={5}
           />
           {errors?.title && <span>{errors.title}</span>}
       </p>
@@ -36,7 +35,6 @@ const AddForm: FC = () => {
           className="rounded-md w-full"
           required
           placeholder="not less than 150 characters"
-          minLength={150}
           />
            {errors?.description && <span>{errors.description}</span>}
       </p>

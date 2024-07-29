@@ -24,11 +24,11 @@ export const createTodoAction: ActionFunction = async ({ request }) => {
   const errors = {} as Error
 
   if (title.length < 5) {
-    errors.title = "Cannot be less than 5 characters"
+    errors.title = "Cannot be less than 5 characters."
   }
 
   if (description.length < 150) {
-    errors.description = "Cannot be less than 150 characters"
+    errors.description = `Cannot be less than 150 characters. ${150 - description.length} characters left`
   }
 
   if (Object.keys(errors).length) {

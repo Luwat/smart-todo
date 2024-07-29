@@ -1,7 +1,7 @@
-import AddForm from "../components/ui/AddForm"
+import TodoForm from "../components/ui/TodoForm"
 
 const CreateTodoPage = () => {
-    return <AddForm />
+    return <TodoForm method="post" todoSubmit="Add Todo"/>
 }
 
 export default CreateTodoPage

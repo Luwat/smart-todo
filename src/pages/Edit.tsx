@@ -1,7 +1,7 @@
-import EditForm from "../components/ui/EditForm";
+import TodoForm from "../components/ui/TodoForm";
 
 const EditTodoPage = () => {
-    return <EditForm />
+    return <TodoForm method="patch" todoSubmit="Edit Todo"/>
 }
 
 export default EditTodoPage;

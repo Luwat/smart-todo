@@ -1,12 +1,6 @@
 import TodoItem from "./TodoItem";
 import { useRouteLoaderData } from "react-router-dom";
-
-export type Todos = {
-        id: string;
-        title: string;
-        description: string;
-    }
-
+import type { Todos } from "../util/definitions";
 
 
 const TodosList = () => {

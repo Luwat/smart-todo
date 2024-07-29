@@ -1,6 +1,6 @@
 import TodoDetails from "../components/TodoDetails";
 import { useRouteLoaderData, useParams } from "react-router-dom";
-import type { Todos } from "../components/TodosList";
+import type { Todos } from "../util/definitions";
 
 /*
 Type assertions have saved me a lot of typescript error issues.

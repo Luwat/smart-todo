@@ -1,5 +1,6 @@
 import { json, redirect, ActionFunction } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import type { Error } from "./definitions";
 
 export async function todoLoader() {
   const response = await fetch("http://localhost:3000/todos");
@@ -9,11 +10,6 @@ export async function todoLoader() {
   }
 
   return response;
-}
-
-export type Error = {
-  title: string;
-  description: string;
 }
 
 export const createTodoAction: ActionFunction = async ({ request }) => {

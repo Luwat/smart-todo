@@ -1,6 +1,5 @@
 import { Form, FormMethod, Link, useActionData, useParams, useRouteLoaderData } from "react-router-dom";
-import type { Error } from "../../util/http";
-import type { Todos } from "../TodosList";
+import type { Error, Todos } from "../../util/definitions";
 
 const TodoForm = ({method, todoSubmit}: {method: FormMethod; todoSubmit: string}) => {
   const params = useParams();
